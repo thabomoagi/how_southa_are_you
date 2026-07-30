@@ -1,3 +1,23 @@
 spring:
   application:
     name: how-sa-are-you
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/how_sa_ru
+    username: ${DB_USERNAME:thabo}
+    password: ${DB_PASSWORD:2026}
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
+
+  flyway:
+    enabled: true
+
+server:
+  port: 8080
+
+jwt:
+  secret: ${JWT_SECRET:7HnQ4xLp9Vm2RwK8Za5JtY3DcN6FsU1BgE9PwX2MrL}
+  expiration-ms: 604800000

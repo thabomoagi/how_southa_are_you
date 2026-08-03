@@ -3,7 +3,7 @@ spring:
     name: how-sa-are-you
 
   datasource:
-    url: jdbc:postgresql://localhost:5432/how_sa_ru
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/how_sa_ru}
     username: ${DB_USERNAME:thabo}
     password: ${DB_PASSWORD:2026}
 
@@ -21,3 +21,6 @@ server:
 jwt:
   secret: ${JWT_SECRET:7HnQ4xLp9Vm2RwK8Za5JtY3DcN6FsU1BgE9PwX2MrL}
   expiration-ms: 604800000
+
+app:
+  seed-questions: ${SEED_QUESTIONS:false}

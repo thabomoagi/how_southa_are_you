@@ -1,0 +1,31 @@
+spring:
+    application:
+        name: how-sa-are-you
+
+    datasource:
+        url: ${DB_URL:jdbc:postgresql://localhost:5432/how_sa_ru}
+        username: ${DB_USERNAME:thabo}
+        password: ${DB_PASSWORD:2026}
+
+    jpa:
+        hibernate:
+            ddl-auto: validate
+        show-sql: true
+        properties:
+            hibernate:
+                format_sql: true
+
+    flyway:
+        enabled: true
+        baseline-on-migrate: true
+
+server:
+    port: 8080
+
+jwt:
+    secret: ${JWT_SECRET:dsfi34rffsd43DcN6FsU1BgE9PwX2MrL}
+    access-expiration-ms: 900000
+    refresh-expiration-ms: 604800000
+
+app:
+    seed-questions: ${SEED_QUESTIONS:false}

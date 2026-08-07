@@ -1,0 +1,1 @@
+ALTER TABLE thirty_seconds_cards DROP COLUMN category;

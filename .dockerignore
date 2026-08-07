@@ -1,6 +1,10 @@
-target/
-.git/
-.vscode/
-.idea/
+.git
+.idea
 *.iml
+.vscode
+target/
+.DS_Store
+*.log
+application-local.yml
 .env
+README.md
